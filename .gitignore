@@ -1,0 +1,6 @@
+.idea
+target
+*.iml
+application.pid
+stock-service-impl/
+thrift-generate
