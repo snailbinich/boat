@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.izhaoyan</groupId>
-    <artifactId>jooq2</artifactId>
+    <artifactId>jdbc</artifactId>
     <version>0.1.0</version>
 
     <parent>
@@ -54,10 +54,6 @@
             <groupId>org.jooq</groupId>
             <artifactId>jooq-codegen</artifactId>
             <version>3.7.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
         <!-- for test -->
