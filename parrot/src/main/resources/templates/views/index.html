@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html layout:decorator="layout/template">
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>买手管理后台</title>
+</head>
+<body layout:fragment="content">
+<section class="content-header">
+    <h1>
+        买手管理后台
+        <small>订单导入</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active"><a href="/admin/order/search_page.do">下厨房订单导入</a></li>
+    </ol>
+</section>
+<section class="content" >
+    <!-- Small boxes (Stat box) -->
+    <div class="row" >
+        <div class="col-md-12">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="fa fa-bullhorn"></i>
+                <h3 class="box-title">错误提示</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <p>买手管理后台搭建</p>
+            </div><!-- /.box-body -->
+
+        </div>
+      </div>
+    </div>
+    <div class="row" ng-controller="messageCtrl">
+        <div class="col-md-12">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="fa fa-bullhorn"></i>
+                <h3 class="box-title">消息列表</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <loading></loading>
+                <table class="table">
+                    <tr ng-repeat="item in messages">
+                        <td ng-bind="item.id">等待数据加载</td>
+                        <td ng-bind="item.message"></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <uib-pagination
+                        boundary-links="true"
+                        total-items="totalItems"
+                        ng-model="currentPage"
+                        class="pagination-sm"
+                        previous-text="&lsaquo;"
+                        next-text="&rsaquo;"
+                        first-text="&laquo;"
+                        last-text="&raquo;"
+                        max-size="5"
+                        items-per-page="pageSize"
+                        ng-change="pageChanged()">
+
+                </uib-pagination>
+
+            </div><!-- /.box-body -->
+
+        </div>
+            </div>
+    </div>
+</section>
+<script type="text/javascript">
+    require(["bootstrap","message"], function(bootstrap,message){
+       console.log(message);
+    });
+</script>
+</body>
+</html>

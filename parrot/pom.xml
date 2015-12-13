@@ -6,6 +6,11 @@
     <groupId>com.izhaoyan</groupId>
     <artifactId>parrot</artifactId>
     <version>0.1.0</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -27,6 +32,10 @@
                     <artifactId>tomcat-jdbc</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
             <groupId>com.zaxxer</groupId>
@@ -64,11 +73,6 @@
         </dependency>
 
     </dependencies>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
 
     <build>
         <plugins>

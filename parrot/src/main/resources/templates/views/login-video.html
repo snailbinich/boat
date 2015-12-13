@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html layout:decorator="layout/logintemplate">
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body layout:fragment="content">
+<style class="text/css">
+    body {
+        margin: 0;
+        background: transparent;
+    }
+    video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        background: url('polina.jpg') no-repeat;
+        background-size: cover;
+    }
+</style>
+<video autoplay="true" loop="true" poster="polina.jpg" id="bgvideo">
+    <source src="http://www.webhek.com/misc-res/video-background/polina.webm" type="video/webm" />
+    <source src="http://www.webhek.com/misc-res/video-background/polina.mp4" type="video/mp4" />
+</video>
+<div class="login-box">
+    <div class="login-logo">
+        <a href="../../index2.html"><b>Wants</b><small>买手后台</small></a>
+    </div><!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">请登录</p>
+        <form action="../../index2.html" method="post">
+            <div class="form-group has-feedback">
+                <input type="email" class="form-control" placeholder="Email" />
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="Password" />
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                        <label>
+                            <input type="checkbox" style="position: static;margin-left: 0px;"/> 记住我
+                        </label>
+                    </div>
+                </div><!-- /.col -->
+                <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">登陆</button>
+                </div><!-- /.col -->
+            </div>
+        </form>
+
+
+        <a href="#">忘记了密码?</a><br />
+        <a href="register.html" class="text-center">注册成为买手</a>
+
+    </div><!-- /.login-box-body -->
+</div><!-- /.login-box -->
+<script>
+    var video = document.getElementById("bgvideo");
+    video.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        video.play();
+    });
+</script>
+</body>
+</html>

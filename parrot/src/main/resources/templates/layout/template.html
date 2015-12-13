@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE"></title>
+    <div th:replace="fragments/styles"></div>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+
+<div class="wrapper">
+    <div th:replace="fragments/header :: header">
+        layout header
+    </div>
+    <div th:replace="fragments/sidebar :: leftside">
+        layout header
+    </div>
+
+    <!-- Full Width Column -->
+
+    <div class="content-wrapper" style="background-color:#FFFFFF;">
+            <div layout:fragment="content" >
+
+            </div>
+    </div><!-- /.content-wrapper -->
+
+</div><!-- ./wrapper -->
+<div th:replace="fragments/footer :: footer">&copy; 2015 The Static Templates</div>
+
+
+
+</body>
+</html>
