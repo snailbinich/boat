@@ -15,10 +15,12 @@ public class AccessInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        HttpSession session = request.getSession();
-        if(session == null || session.getAttribute("userid") == null){
-            response.sendRedirect("/login");
-        }
-        return super.preHandle(request, response, handler);
+//        HttpSession session = request.getSession();
+//        if(session == null || session.getAttribute("userid") == null){
+//            response.sendRedirect("/login");
+//        }
+
+//        return super.preHandle(request, response, handler);
+        return true;
     }
 }

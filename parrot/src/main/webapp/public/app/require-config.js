@@ -6,11 +6,14 @@ requirejs.config({
         angularui:'../lib/ui-bootstrap-tpls-0.14.3.min',
         domReady:'../lib/domReady.min',
         app:'app',
-        message:'modules/messageCtrl',
         bootstrap : '../lib/bootstrap/js/bootstrap.min',
         request:'services/request',
         lte:'../lib/lte/js/app.min',
-        ajaxLoading:'./compents/loadingInterceptor'
+        ajaxLoading:'./compents/loadingInterceptor',
+
+        message:'modules/messageCtrl',
+        session:'modules/sessionCtrl'
+
 
     },
     shim:{

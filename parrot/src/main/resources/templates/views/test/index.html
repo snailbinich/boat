@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html layout:decorator="layout/template">
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>买手管理后台</title>
+</head>
+<body layout:fragment="content">
+<section class="content-header">
+    <h1>
+        买手管理后台
+        <small>订单导入</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active"><a href="/admin/order/search_page.do">下厨房订单导入</a></li>
+    </ol>
+</section>
+<section class="content" >
+    <!-- Small boxes (Stat box) -->
+    <div class="row" >
+        <div class="col-md-12">
+        <div class="box box-success" ng-controller="sessionCtrl">
+            <div class="box-header with-border">
+                <i class="fa fa-bullhorn"></i>
+                <h3 class="box-title">错误提示</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+               <form action="/test/login.do" method="post">
+                  email: <input name="email" type="email" ng-model="email"/>
+                  password: <input name="password" ng-model="password"/>
+                   <button type="button" class="btn btn-success" ng-click="auth()">提交</button>
+               </form>
+            </div><!-- /.box-body -->
+
+        </div>
+      </div>
+    </div>
+
+</section>
+<script type="text/javascript">
+    require(["bootstrap","session"], function(bootstrap,session){
+        console.log(session);
+    });
+</script>
+</body>
+</html>
